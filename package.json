@@ -1,0 +1,25 @@
+{
+  "name": "test-api",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "api-ai-recognizer": "^1.1.1",
+    "bcrypt": "^2.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "~1.0.0",
+    "botbuilder": "^3.15.0",
+    "jsonwebtoken": "^8.2.1",
+    "luis-sdk-async": "^1.0.0",
+    "mysql": "^2.15.0",
+    "nodemon": "^1.17.4",
+    "request": "^2.83.0",
+    "restify": "^7.2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^1.0.0"
+  }
+}

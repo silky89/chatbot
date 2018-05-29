@@ -1,0 +1,15 @@
+{
+    "name": "testbot",
+    "description": "",
+    "secretKey": "",
+    "services": [
+        {
+            "id": "e182c5a0-631f-11e8-8935-41eeff14c6e5",
+            "name": "testbot",
+            "type": "endpoint",
+            "appId": "47340519-6bd9-4d02-9636-e30f9b40ac93",
+            "appPassword": "utzZCJ262=qbupNEOA38@{#",
+            "endpoint": "https://testbot18.azurewebsites.net/api/messages"
+        }
+    ]
+}
