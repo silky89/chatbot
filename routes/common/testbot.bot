@@ -7,9 +7,9 @@
             "id": "e182c5a0-631f-11e8-8935-41eeff14c6e5",
             "name": "testbot",
             "type": "endpoint",
-            "appId": "ee6e70aa-ec8f-44be-abb0-99f81a0a2974",
-            "appPassword": "mjshyOQD899?)(leRKZY10^",
-            "endpoint": "http://localhost:8000/api/messages"
+            "appId": "6c6c9c5f-2872-48e6-b562-3ec46fa225f9",
+            "appPassword": "qgrmBCJUI6411;$%)impKU2",
+            "endpoint": "https://test-boturl.azurewebsites.net/api/messages"
         },
         {
             "appId": "ee6e70aa-ec8f-44be-abb0-99f81a0a2974",

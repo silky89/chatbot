@@ -109,8 +109,8 @@ server.listen(8000 || 8081 || 3978, function() {
 
 // Create chat connector for communicating with the Bot Framework Service
 var connector = new builder.ChatConnector({
-	appId: "ee6e70aa-ec8f-44be-abb0-99f81a0a2974",
-	appPassword: "mjshyOQD899?)(leRKZY10^"
+	appId: "6c6c9c5f-2872-48e6-b562-3ec46fa225f9",
+	appPassword: "qgrmBCJUI6411;$%)impKU2"
 });
 
 // console.log("connector",connector);
