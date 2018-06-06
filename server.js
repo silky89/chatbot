@@ -15,8 +15,9 @@ var connector = new builder.ChatConnector({
 server.post('/api/messages', connector.listen());
 
 var bot = new builder.UniversalBot(connector);
-
+console.log("bot",bot);
 bot.dialog('/', function (session, args) {
+	console.log("session",session);
     if (!session.userData.greeting) {
         session.send("Hello. What is your name?");
         session.userData.greeting = true;
