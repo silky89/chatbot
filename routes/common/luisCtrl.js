@@ -1,6 +1,6 @@
 const LUISClient = require("../luis_sdk");
-const APPID = "e2da5051-4a2b-42c2-8e81-512ae5d6a718";
-const APPKEY = "f7ecf939a7894287b86b215c9f271d2e";
+const APPID = "22c47090d79345c3b3e4930ef6b8aed0";
+const APPKEY = "7a950bcf686d408086e0232b7335f1c8";
 var LUISclient = LUISClient({
 	appId: APPID,
 	appKey: APPKEY,

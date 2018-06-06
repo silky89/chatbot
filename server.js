@@ -82,22 +82,19 @@
 
 
 
-
-// var http = require('http');
-// var express = require('express');
-// var app = express();
-// var bodyParser = require('body-parser');
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({
-//     extended: true
-// }));
-// require('./routes')(app);
-// var server = app.listen(8000, function() {
-//     console.log("app running on 8000");
-// });
-
-// initialize proc
-// proc.init(app);
+var http = require('http');
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
+var luisCtrl = require('./routes/common/luisCtrl');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+	extended: true
+}));
+require('./routes')(app);
+var server = app.listen(9000, function() {
+	console.log("app running on 9000");
+});
 
 
 
@@ -106,21 +103,36 @@ var builder = require('botbuilder');
 
 // Setup Restify Server
 var server = restify.createServer();
-server.listen(8000 || 8081 || 3978, function () {
-   console.log('%s listening to %s', server.name, server.url); 
+server.listen(8000 || 8081 || 3978, function() {
+	console.log('%s listening to %s', server.name, server.url);
 });
 
 // Create chat connector for communicating with the Bot Framework Service
 var connector = new builder.ChatConnector({
-    appId: "47340519-6bd9-4d02-9636-e30f9b40ac93",
-    appPassword: "utzZCJ262=qbupNEOA38@{#"
+	appId: "ee6e70aa-ec8f-44be-abb0-99f81a0a2974",
+	appPassword: "mjshyOQD899?)(leRKZY10^"
 });
 
-console.log("connector",connector);
+// console.log("connector",connector);
 // Listen for messages from users 
 server.post('/api/messages', connector.listen());
 
 // Receive messages from the user and respond by echoing each message back (prefixed with 'You said:')
-var bot = new builder.UniversalBot(connector, function (session) {
-    session.send("You said: %s", session.message.text);
-});
+var bot = new builder.UniversalBot(connector, [
+	function(session) {
+		// session.send(session.message.text);
+		session.send("Welcome to clinical trial");
+		builder.Prompts.text(session, "How can i help u");
+		// luisCtrl.getAIResponse(session.message.text, function(response) {
+		// 	session.send(response);
+		// });
+	},
+	function(session, result) {
+		console.log("result*****************", result.response);
+		luisCtrl.getAIResponse(result.response, function(response) {
+			console.log("response",response);
+			session.send(response);
+			session.endDialog();
+		});
+	}
+]);

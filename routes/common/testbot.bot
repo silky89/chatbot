@@ -4,20 +4,20 @@
     "secretKey": "",
     "services": [
         {
-            "appId": "d749043e-8a44-4f09-b7a5-0417558fdd80",
             "id": "e182c5a0-631f-11e8-8935-41eeff14c6e5",
-            "type": "endpoint",
-            "appPassword": "ortoVQS71@;yfwXWBV075|:",
-            "endpoint": "http://localhost:8000/api/messages",
-            "name": "testbot"
-        },
-        {
-            "id": "cb4d8400-64a0-11e8-8fd8-bdc2363c76ab",
-            "name": "testbotbuilder",
+            "name": "testbot",
             "type": "endpoint",
             "appId": "ee6e70aa-ec8f-44be-abb0-99f81a0a2974",
             "appPassword": "mjshyOQD899?)(leRKZY10^",
-            "endpoint": "https://testbot06.azurewebsites.net/api/messages"
+            "endpoint": "http://localhost:8000/api/messages"
+        },
+        {
+            "appId": "ee6e70aa-ec8f-44be-abb0-99f81a0a2974",
+            "id": "cb4d8400-64a0-11e8-8fd8-bdc2363c76ab",
+            "type": "endpoint",
+            "appPassword": "mjshyOQD899?)(leRKZY10^",
+            "endpoint": "https://testbot06.azurewebsites.net/api/messages",
+            "name": "testbotbuilder"
         }
     ]
 }
