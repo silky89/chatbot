@@ -8,8 +8,8 @@ server.listen(8000 || 8000 || 3978, function() {
 	console.log('%s listening to %s', server.name, server.url);
 });
 var connector = new builder.ChatConnector({
-	appId: "716080ab-f641-4495-b509-0fff55bfcf95",
-	appPassword: "rvhbHRAHG6%:rlbML6573_%"
+	appId: "dd602185-0526-4411-93aa-996824a8a37a",
+	appPassword: "kQYI20!orashoBNIJ830;}["
 });
 
 server.post('/api/messages', connector.listen());
